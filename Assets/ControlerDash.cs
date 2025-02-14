@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class ControlePoissonDash : MonoBehaviour
+public class ControlerDash : MonoBehaviour
 {
+    // Start is called before the first frame update
     private Rigidbody _rb;
 
     void Start()
@@ -14,6 +14,7 @@ public class ControlePoissonDash : MonoBehaviour
 
     void OnDash()
     {
-        //_rb.AddRelativeForce(Vector3.forward * 1f, ForceMode.VelocityChange);
+        Debug.Log("Dash");
+        _rb.AddRelativeForce(0, 0, 2f, ForceMode.VelocityChange);
     }
 }
